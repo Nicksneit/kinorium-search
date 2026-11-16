@@ -4,15 +4,15 @@
 -->
 
 <p align="center">
-  <a href="README.md">English</a> &nbsp;|&nbsp; <b>Русский</b> &nbsp;|&nbsp; <a href="README.uk.md">Українська</a>
-</p>
-
-<p align="center">
   <img src="screenshots/banner-ru.png" alt="Kinorium Search" width="100%">
 </p>
 
 <p align="center">
-  <a href="CHROME_WEB_STORE_URL"><img src="https://img.shields.io/badge/Chrome%20Web%20Store-%D0%A3%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%82%D1%8C-4285F4?logo=googlechrome&logoColor=white&style=for-the-badge" alt="Установить из Chrome Web Store"></a>
+  <a href="https://chromewebstore.google.com/detail/nmhjbomlmobamnenogidomidmkmncimh?utm_source=item-share-cb"><img src="https://img.shields.io/badge/Chrome%20Web%20Store-Install-4285F4?logo=googlechrome&logoColor=white&style=for-the-badge" alt="Install from Chrome Web Store"></a>
+</p>
+
+<p align="center">
+  <a href="README.md">English</a> &nbsp;|&nbsp; <b>Русский</b> &nbsp;|&nbsp; <a href="README.uk.md">Українська</a>
 </p>
 
 <p align="center">
