@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark light">
+  <title data-i18n="optionsTitle">Kinorium Search</title>
+  <link rel="icon" href="icons/icon32.png">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <header class="top">
+    <img class="logo" src="icons/icon48.png" alt="" width="40" height="40">
+    <div class="brand">
+      <h1>Kinorium Search</h1>
+      <p data-i18n="subtitle">Быстрый поиск фильма на других сайтах</p>
+    </div>
+    <span id="status" class="status" aria-live="polite"></span>
+    <label class="lang">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>
+      <select id="interfaceLang" aria-label="Language">
+        <option value="ru">Русский</option>
+        <option value="uk">Українська</option>
+        <option value="en">English</option>
+      </select>
+    </label>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2 data-i18n="appearanceHeader">Внешний вид</h2>
+      <div class="appearance">
+        <div class="field">
+          <label for="buttonText" data-i18n="labelBtnText">Текст кнопки</label>
+          <input type="text" id="buttonText" maxlength="12" autocomplete="off" spellcheck="false">
+          <div class="chips" id="emojiChips"></div>
+        </div>
+        <div class="field">
+          <span class="label" data-i18n="labelBtnTheme">Тема</span>
+          <div class="segmented" id="themeGroup" role="radiogroup">
+            <label><input type="radio" name="theme" value="dark"><span data-i18n="themeDark">Тёмная</span></label>
+            <label><input type="radio" name="theme" value="light"><span data-i18n="themeLight">Светлая</span></label>
+            <label><input type="radio" name="theme" value="gray"><span data-i18n="themeGray">Серая</span></label>
+            <label><input type="radio" name="theme" value="auto"><span data-i18n="themeAuto">Авто</span></label>
+          </div>
+        </div>
+      </div>
+      <div class="preview" aria-hidden="true">
+        <span class="preview-label" data-i18n="preview">Предпросмотр</span>
+        <div class="preview-bar">
+          <span class="preview-title" data-i18n="previewTitle">Начало</span>
+          <span class="preview-rating">7.7</span>
+          <span class="preview-icon"><svg viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h6M14 3l5 5v5M14 3v5h5M9 13h4M9 17h3M18 16v6M15 19h6"/></svg></span>
+          <span class="preview-icon"><svg viewBox="0 0 24 24"><path d="M10 14a4.5 4.5 0 0 0 6.4 0l3-3a4.5 4.5 0 0 0-6.4-6.4l-1 1M14 10a4.5 4.5 0 0 0-6.4 0l-3 3a4.5 4.5 0 0 0 6.4 6.4l1-1"/></svg></span>
+          <button type="button" class="ks-btn" id="previewBtn" tabindex="-1">🔍</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2 data-i18n="menuHeader">Меню</h2>
+      <div class="switches">
+        <label class="switch-row">
+          <span class="switch-text">
+            <span data-i18n="showIcons">Иконки сайтов</span>
+            <small data-i18n="showIconsHint">Значки сайтов в меню и в списке ниже</small>
+          </span>
+          <input type="checkbox" id="showIcons" class="switch">
+        </label>
+        <label class="switch-row">
+          <span class="switch-text">
+            <span data-i18n="showOpenAll">«Открыть все»</span>
+            <small data-i18n="showOpenAllHint">Отметки у сайтов и кнопка открытия нескольких сайтов сразу</small>
+          </span>
+          <input type="checkbox" id="showOpenAll" class="switch">
+        </label>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="card-head">
+        <h2 data-i18n="sitesHeader">Сайты для поиска</h2>
+        <button type="button" id="addSite" class="btn primary">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+          <span data-i18n="addSiteBtn">Добавить сайт</span>
+        </button>
+      </div>
+      <p class="hint" id="placeholdersHint"></p>
+      <div id="sitesContainer" class="sites"></div>
+      <div class="empty-sites" id="emptySites" data-i18n="emptySites" hidden>Список пуст — добавьте сайт вручную или выберите из популярных ниже.</div>
+      <div class="presets">
+        <span class="presets-label" data-i18n="presetsLabel">Быстро добавить</span>
+        <div class="chips" id="presets"></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2 data-i18n="backupHeader">Резервная копия</h2>
+      <div class="row-buttons">
+        <button type="button" id="exportBtn" class="btn">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15V3M7 8l5-5 5 5M5 15v4a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-4"/></svg>
+          <span data-i18n="exportBtn">Экспорт</span>
+        </button>
+        <button type="button" id="importBtn" class="btn">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 15v4a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-4"/></svg>
+          <span data-i18n="importBtn">Импорт</span>
+        </button>
+        <span class="grow"></span>
+        <button type="button" id="resetBtn" class="btn ghost danger">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7L3 8M3 3v5h5"/></svg>
+          <span data-i18n="resetBtn">Сбросить</span>
+        </button>
+      </div>
+      <input type="file" id="importInput" accept=".json,application/json" hidden>
+    </section>
+
+    <p class="footer-note" data-i18n="autosaveNote">Изменения сохраняются автоматически.</p>
+  </main>
+
+  <div id="toast" class="toast" role="status"></div>
+
+  <script src="shared.js"></script>
+  <script src="options.js"></script>
+</body>
+</html>
