@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
-  <img src="docs/images/banner-uk.png" alt="Kinorium Search" width="100%">
+  <img src="screenshots/banner-uk.png" alt="Kinorium Search" width="100%">
 </p>
 
 <p align="center">
@@ -41,14 +41,14 @@
 ## Скриншоти
 
 <p align="center">
-  <img src="docs/images/menu-uk.png" alt="Меню пошуку" width="49%">
-  <img src="docs/images/multi-uk.png" alt="Кілька сайтів одразу" width="49%">
+  <img src="screenshots/menu-uk.png" alt="Меню пошуку" width="49%">
+  <img src="screenshots/multi-uk.png" alt="Кілька сайтів одразу" width="49%">
 </p>
 <p align="center">
-  <img src="docs/images/themes-uk.png" alt="Теми" width="100%">
+  <img src="screenshots/themes-uk.png" alt="Теми" width="100%">
 </p>
 <p align="center">
-  <img src="docs/images/settings-uk.png" alt="Налаштування" width="70%">
+  <img src="screenshots/settings-uk.png" alt="Налаштування" width="70%">
 </p>
 
 ## Встановлення
