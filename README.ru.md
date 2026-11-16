@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
-  <img src="docs/images/banner-ru.png" alt="Kinorium Search" width="100%">
+  <img src="screenshots/banner-ru.png" alt="Kinorium Search" width="100%">
 </p>
 
 <p align="center">
@@ -41,14 +41,14 @@
 ## Скриншоты
 
 <p align="center">
-  <img src="docs/images/menu-ru.png" alt="Меню поиска" width="49%">
-  <img src="docs/images/multi-ru.png" alt="Несколько сайтов сразу" width="49%">
+  <img src="screenshots/menu-ru.png" alt="Меню поиска" width="49%">
+  <img src="screenshots/multi-ru.png" alt="Несколько сайтов сразу" width="49%">
 </p>
 <p align="center">
-  <img src="docs/images/themes-ru.png" alt="Темы" width="100%">
+  <img src="screenshots/themes-ru.png" alt="Темы" width="100%">
 </p>
 <p align="center">
-  <img src="docs/images/settings-ru.png" alt="Настройки" width="70%">
+  <img src="screenshots/settings-ru.png" alt="Настройки" width="70%">
 </p>
 
 ## Установка
